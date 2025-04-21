@@ -1,4 +1,4 @@
-from database import Database
+from pg_database import Database
 
 
 class Action:
@@ -28,8 +28,10 @@ class Action:
 
     def execute(self):
         if self.type == 'DROP':
+            print(f"Dropped index on {self.column} in {self.table}")
             self.db.drop_index(self.column, self.table)
         elif self.type == 'CREATE':
+            print(f"Created index on {self.column} in {self.table}")
             self.db.create_index(self.column, self.table)
         else:
             print("PASS action!")

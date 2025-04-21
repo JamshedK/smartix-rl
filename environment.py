@@ -1,4 +1,4 @@
-from database import Database
+from pg_database import Database
 from benchmark import Benchmark
 from state import State
 from action import Action

@@ -8,9 +8,5 @@ class Benchmark:
         self.benchmark = benchmark
 
     def run(self):
-        if (self.benchmark == "TPCH"):
-            results = TPCH().run()
-        else:
-            raise "No corresponding benchmark"
-        
-        return results
+        result = TPCH.run_benchmark("tpch")
+        return result

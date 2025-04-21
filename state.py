@@ -1,4 +1,4 @@
-from database import Database
+from pg_database import Database
 import pprint
 
 class State:
