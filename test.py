@@ -7,10 +7,20 @@ import time
 import shutil
 from pg_database import Database
 from TPCH import TPCH
+from benchmark import Benchmark
 
 
 
 # Run it directly
 if __name__ == "__main__":
     db = Database()
-    db.analyze_tables()
+    print(db.get_indexes_map())
+    # print('Creating an index')
+    # db.create_index("c_name", "customer")
+    # print(db.get_indexes_map())
+    # print('Resetting indexes')
+    # db.reset_indexes()
+    # print(db.get_indexes_map())
+    # benchmark = Benchmark()
+    # runt he benchmark
+    # benchmark.run()

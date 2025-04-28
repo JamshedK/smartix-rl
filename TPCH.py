@@ -71,4 +71,5 @@ class TPCH:
         print(f"📊 Power@Size      = {power:.2f}")
         print(f"📈 Throughput@Size = {throughput:.2f}")
         print(f"💡 QphH@Size        = {qphh:.2f}")
+        print(f"⏱ Elapsed Time    = {summary['Elapsed Time (nanoseconds)'] / 1_000_000:.2f} ms")
         return qphh

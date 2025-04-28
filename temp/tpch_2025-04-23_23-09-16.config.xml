@@ -3,7 +3,7 @@
   <isolation>TRANSACTION_SERIALIZABLE</isolation>
   <batchsize>1024</batchsize>
   <scalefactor>0.1</scalefactor>
-  <terminals>1</terminals>
+  <terminals>2</terminals>
   <works>
     <work>
       <serial>true</serial>
