@@ -8,5 +8,6 @@ class Benchmark:
         self.benchmark = benchmark
 
     def run(self):
+        # run the TPCH benchmark
         result = TPCH.run_benchmark("tpch")
         return result

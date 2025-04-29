@@ -31,6 +31,7 @@ class Environment:
 
 
     def step(self, action):
+        # Execute action
         action.execute()
         state = State()
         reward = self.get_reward(state)
@@ -39,8 +40,8 @@ class Environment:
 
     def get_available_actions(self, state):
         available_actions = list()
-        # available_actions.append(Action('PASS', 'PASS', 'PASS'))
 
+        # available_actions.append(Action('PASS', 'PASS', 'PASS'))
         for table, columns in state.indexes_map.items():
             for column in columns.keys():
                 if state.indexes_map[table][column] == 0:
@@ -84,6 +85,7 @@ class Environment:
 
 
     def get_state_features(self, state):
+        # Get state features
         state_features = dict()
         state_features['Bias'] = 1.0
         for table, columns in state.indexes_map.items():
