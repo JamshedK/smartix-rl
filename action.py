@@ -27,11 +27,14 @@ class Action:
 
 
     def execute(self):
+        # Execute the action
         if self.type == 'DROP':
             print(f"Dropped index on {self.column} in {self.table}")
+            # Drop index
             self.db.drop_index(self.column, self.table)
         elif self.type == 'CREATE':
             print(f"Created index on {self.column} in {self.table}")
+            # Create index
             self.db.create_index(self.column, self.table)
         else:
             print("PASS action!")
